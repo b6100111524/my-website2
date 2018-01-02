@@ -1,0 +1,448 @@
+/***** 底版預設 *****/
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a, a:hover, a:focus {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+  
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.clearfix::after {            /*從選取的元素後面插入東西*/
+  content: '';
+  display: table;
+  clear: both;                /*移除浮動造成的結果*/
+}
+
+.container {
+  width: 85%;
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}
+
+section {
+  padding: 100px 0;
+}
+
+/***** Header setting *****/
+
+header {                    /*定義頁首*/
+  position: fixed;          /*固定頁首*/
+  width: 100%;              /*左右切齊*/
+  left: 0;
+  right: 0;
+  background-color: #222;
+  z-index: 100;             /*頁首置頂*/
+}
+
+#logo {                     /*定義標誌*/
+  float: left;              /*標誌放左*/
+  width: 80px;
+  height:40px;
+  padding: 10px;
+}
+
+.nav {                      /*定義按鈕 連結外框*/
+  float: right;             /*按鈕放右*/
+}
+
+.nav li {                   /*定義按鈕 套組單元*/
+  display: inline-block;    /*橫向排列*/
+}
+
+.nav li a {                 /*定義按鈕 個別連結*/
+  color: #fff;
+  text-transform: capitalize;   /*首字大寫*/
+  display: block;
+  padding: 10px 12px;           /*擴展按鈕*/
+}
+
+/***** HomePage Setting *****/
+
+.home_bg {
+  background-image: url(../images/DSC_0727-3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.container_table {        /*製作表格格式*/
+  display: table;         /*製作表格格式*/
+  width: 100%;            /*文字置中技巧*/
+  height: 100%;           /*文字置中技巧*/
+  position: relative;
+}
+
+.container_table_cell {   /*製作表格單元*/
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.container_table_cell h2 {
+  color: #fff;
+  text-transform: capitalize;   /*首字大寫*/
+  font-size: 54px;
+}
+
+.social_icons a {               /* icon 格式*/
+  color: #fff;
+  display: inline-block;
+  width: 50px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 30px;
+  margin-right: 7px;
+}
+
+.overlay {                    /*製作圖片遮罩*/
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/***** About Me *****/
+
+h2 {
+  margin-bottom: 50px;
+  text-align: center;         /*標題置中*/
+  font-size: 40px;
+  line-height: 50px;
+  text-transform: uppercase;  /*全部大寫*/
+  letter-spacing: 2px;        /*字母間距*/
+}
+
+.col-left, .col-right {       /*切出兩個區塊*/
+  float: left;                /*浮動排列 會導致覆蓋內容 >> .clearfix 解決*/
+  width: 50%;
+  padding: 0 15px;            /*區塊左右都15px*/
+}
+
+.personal-info h3 {
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  text-transform: capitalize;
+}
+
+.personal-info p {
+  color: #767676;
+  line-height: 24px;
+  text-align: justify;        /*文字左右切齊*/
+}
+
+.skill {                      /*技能清單外框*/
+  margin: 30px auto;
+}
+
+.skill li {                   /*技能清單單元*/
+  font-size: 15px;
+  line-height: 35px;
+  text-transform: capitalize;
+}
+
+.button-group .download_cv, .button-group .hire_me {    /*按鈕外框*/
+  display: inline-block;                                /*按紐水平排列*/
+}
+
+.button-group .download_cv {
+  margin-right: 18px;
+}
+
+.button-group a {             /*按鈕單元*/
+  display: block;
+  color: #000;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 10px 38px;
+  text-transform: capitalize;
+}
+
+.button-group a:hover {       /*游標接觸時 按鈕效果*/
+  background: #000;           /*游標接觸時 變成黑色*/
+  color: #fff;                /*游標接觸時 變成白色*/
+  /*動畫漸變 all指定 background & color 因應不同瀏覽器支援 新增前綴詞*/
+  -webkit-transition: all .4s linear;       
+  -moz-transition: all .4s linear;
+  -ms-transition: all .4s linear;
+  -o-transition: all .4s linear;
+  transition: all .4s linear;
+}
+
+/***** My Service *****/
+
+.my_service {
+  background-color: #f9f9f9;
+}
+
+.service-content {
+  float: left;
+  width: 33.33333333%;
+  padding: 0 15px;            /*左右內縮*/
+}
+
+.service-content i {
+  font-size: 30px;
+  line-height: 46px;
+}
+
+.service-content h3 {
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 13px;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.service-content p {
+  color: #767676;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+/***** Resume *****/
+
+.col-horizontal {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #767676;
+}
+
+.col-horizontal:last-child {
+  border-bottom: 0;
+}
+
+h3.resume-subtitle {
+  font-size: 20px;
+  margin-left: 15px;
+  margin-top: 12px;
+  text-transform: capitalize;
+}
+
+.col-horizontal .col-item {
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+}
+
+.experience-year {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  padding: 4px 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.resume-detail h4 {
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+
+.resume-detail h6 {
+  font-size: 12px;
+  margin-bottom: 9px;
+  text-transform: capitalize;
+}
+
+.resume-detail p {
+  line-height: 22px;
+}
+
+/***** Quote *****/
+
+.quotes {
+  background-image: url(../images/DSC_0727-3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  width: 100%;
+}
+
+.quote-inner {
+  color: #fff;
+  text-align: center;
+}
+
+.quote-inner h3 {
+  font-size: 28px;
+  text-transform: capitalize;
+}
+
+.quote-inner p {
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.quote-inner a {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 11px;
+  padding: 12px 49px;
+  display: inline-block;
+  margin-top: 22px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/***** Latest Work *****/
+
+.works {
+  background-color: #f7f7f7;
+}
+
+.col-work {
+  float: left;
+  width: 33.3333333333%;
+  padding: 0 15px;
+}
+
+.col-work a {
+  display: block;
+  margin-bottom: 14px;
+  position: relative;
+  /*動畫漂浮 all (or 空白) 指定 background & color 因應不同瀏覽器支援 新增前綴詞*/
+  -webkit-transition: .2s linear;
+  -moz-transition: .2s linear;
+  -ms-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+  top: 0;
+  left: 0;
+}
+
+.col-work a:hover {
+  box-shadow: 0 16px 22px 0 rgba(90, 91, 95, 0.3);
+  top: -5px;      /*游標接觸時 往上移動*/
+}
+
+/***** Contact Form *****/
+
+.contact-form {
+  width: 65%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-form .form-input:first-child,
+.contact-form .form-input:nth-child(2) {
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+}
+
+.contact-form .form-input:nth-child(3) {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.contact-form input.form-style {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #333;
+  text-transform: capitalize;
+  padding-bottom: 19px;
+  margin-bottom: 12px;
+  outline: none;
+}
+
+.contact-form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #333;
+  outline: none;
+}
+
+.form-submit {
+  text-align: left;
+  padding: 0 15px;
+}
+
+.form-submit input {
+  font-size: 16px;
+  text-transform: capitalize;
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 12px;
+  padding: 15px 60px;
+  margin-top: 16px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  -webkit-transition: .4s linear;
+  -moz-transition: .4s linear;
+  -ms-transition: .4s linear;
+  -o-transition: .4s linear;
+  transition: .4s linear;
+}
+
+.form-submit input:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/***** Footer *****/
+
+footer {
+  padding: 80px 0;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-content p {
+  line-height: 22px;
+}
+
+.footer-social-icon a i {
+  color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 20px;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
+
+
