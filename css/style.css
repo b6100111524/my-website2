@@ -12,6 +12,7 @@ body {
   line-height: 1.42857143;
   color: #333;
   background-color: #fff;
+  font-family: 'Quicksand', sans-serif;   /*底版字體預設*/
 }
 
 * {
@@ -44,7 +45,7 @@ img {
 .clearfix::after {            /*從選取的元素後面插入東西*/
   content: '';
   display: table;
-  clear: both;                /*移除浮動造成的結果*/
+  clear: both;                /*移除浮動造成的排版縮減之結果*/
 }
 
 .container {
@@ -55,7 +56,7 @@ img {
 }
 
 section {
-  padding: 100px 0;
+  padding: 100px 0;           /* section 大區塊前後間隔*/
 }
 
 /***** Header setting *****/
@@ -119,6 +120,7 @@ header {                    /*定義頁首*/
   color: #fff;
   text-transform: capitalize;   /*首字大寫*/
   font-size: 54px;
+  font-family: 'Codystar', cursive;
 }
 
 .social_icons a {               /* icon 格式*/
@@ -131,7 +133,7 @@ header {                    /*定義頁首*/
   margin-right: 7px;
 }
 
-.overlay {                    /*製作圖片遮罩*/
+.overlay {                      /*製作圖片遮罩*/
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
   left: 0;
@@ -145,10 +147,11 @@ header {                    /*定義頁首*/
 h2 {
   margin-bottom: 50px;
   text-align: center;         /*標題置中*/
-  font-size: 40px;
+  font-size: 50px;
   line-height: 50px;
   text-transform: uppercase;  /*全部大寫*/
   letter-spacing: 2px;        /*字母間距*/
+  font-family: 'Ravi Prakash', cursive;
 }
 
 .col-left, .col-right {       /*切出兩個區塊*/
@@ -238,6 +241,7 @@ h2 {
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
+  text-align: justify;        /*文字左右切齊*/
 }
 
 /***** Resume *****/
@@ -307,8 +311,9 @@ h3.resume-subtitle {
 }
 
 .quote-inner h3 {
-  font-size: 28px;
+  font-size: 38px;
   text-transform: capitalize;
+  font-family: 'Ravi Prakash', cursive;
 }
 
 .quote-inner p {
