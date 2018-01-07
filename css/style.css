@@ -1,13 +1,13 @@
 /***** 底版預設 *****/
 
 html, body {
-  width: 100%;
+  width:  100%;
   height: 100%;
 }
 
 body {
   padding: 0px;
-  margin: 0px;
+  margin:  0px;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
@@ -19,24 +19,24 @@ body {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0px;
-  padding: 0px;
+h1, h2, h3, h4, h5, h6, p {   /*底版所有文字預設*/
+  margin:  0px;               /*border外擴*/
+  padding: 0px;               /*border內縮*/
 }
 
 ul, ol {
   list-style: none;
-  margin: 0px;
-  padding: 0px;
+  margin:  0px;               /*border外擴*/
+  padding: 0px;               /*border內縮*/
 }
 
-a, a:hover, a:focus {
-  margin: 0px;
-  padding: 0px;
+a, a:hover, a:focus {         /*按鈕預設*/
+  margin:  0px;               /*border外擴*/
+  padding: 0px;               /*border內縮*/
   text-decoration: none;
 }
   
-img {
+img {                         /*圖片格式預設*/
   width: 100%;
   height: auto;
   display: block;
@@ -48,167 +48,170 @@ img {
   clear: both;                /*移除浮動造成的排版縮減之結果*/
 }
 
-.container {
-  width: 85%;
-  max-width: 1170px;
+.container {                  /*預設整體版面 所有內容都在 container 內建立*/
+  width: 85%;                 /*預設內縮 85% */
+  max-width: 1170px;          /*預設最大寬度*/
   margin: 0 auto;
-  position: relative;
+  position: relative;         /*相對父層 header & section 位置*/
 }
 
-section {
-  padding: 100px 0;           /* section 大區塊前後間隔*/
+section {                     /*定義內文_最外層*/
+  padding: 100px 0;           /*內文最外層區塊前後間隔*/
 }
 
 /***** Header setting *****/
 
-header {                    /*定義頁首*/
-  position: fixed;          /*固定頁首*/
-  width: 100%;              /*左右切齊*/
-  left: 0;
-  right: 0;
-  background-color: #222;
-  z-index: 100;             /*頁首置頂*/
+header {                      /*定義置頂引導欄_最外層*/
+  position: fixed;            /*固定引導欄*/
+  width: 100%;                /*左右切齊*/
+  left:  0;                   /*左側與父層 body 切邊*/
+  right: 0;                   /*右側與父層 body 切邊*/
+  background-color: #222;     /*背景顏色*/
+  z-index: 100;               /*頁首置頂*/
 }
 
-#logo {                     /*定義標誌*/
-  float: left;              /*標誌放左*/
-  width: 80px;
-  height:40px;
-  padding: 10px;
+#logo {                       /*定義標誌*/
+  float: left;                /*標誌放左*/
+  width:  80px;
+  height: 40px;
+  padding: 10px;              /*border內縮*/
 }
 
-.nav {                      /*定義按鈕 連結外框*/
-  float: right;             /*按鈕放右*/
+.nav {                        /*定義按鈕 連結外框 class="nav"*/
+  float: right;               /*按鈕放右*/
 }
 
-.nav li {                   /*定義按鈕 套組單元*/
-  display: inline-block;    /*橫向排列*/
+.nav li {                     /*定義按鈕 套組單元 li of class="nav"*/
+  display: inline-block;      /*橫向排列 ??*/
 }
 
-.nav li a {                 /*定義按鈕 個別連結*/
-  color: #fff;
-  text-transform: capitalize;   /*首字大寫*/
+.nav li a {                   /*定義按鈕 個別連結 li a of class="nav"*/
+  color: #fff;                /*文字顏色*/
+  text-transform: capitalize; /*首字大寫*/
   display: block;
-  padding: 10px 12px;           /*擴展按鈕*/
+  padding: 10px 12px;         /*按鈕內縮*/
+  /*字體預設14px*/
 }
 
 /***** HomePage Setting *****/
 
-.home_bg {
-  background-image: url(../images/DSC_0727-3.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
+.home_bg {                    /*最外層 = section */
+  background-image: url(../images/DSC_0727-3.jpg);    /*插入底圖*/
+  background-size: cover;                             /*圖片向外(內contain)延伸*/
+  background-position: center;                        /*圖片置中*/
+  background-repeat: no-repeat;                       /*圖片不重複排列*/
+  width:  100%;
   height: 100%;
 }
 
-.container_table {        /*製作表格格式*/
-  display: table;         /*製作表格格式*/
-  width: 100%;            /*文字置中技巧*/
-  height: 100%;           /*文字置中技巧*/
-  position: relative;
+.container_table {              /*製作表格格式*/
+  display: table;               /*製作表格格式*/
+  width:  100%;                 /*文字置中技巧*/
+  height: 100%;                 /*文字置中技巧*/
+  position: relative;           /*相對父層 section 位置*/
 }
 
-.container_table_cell {   /*製作表格單元*/
+.container_table_cell {         /*製作表格單元*/
   display: table-cell;
-  text-align: center;
-  vertical-align: middle;
+  text-align: center;           /*單元水平置中*/
+  vertical-align: middle;       /*單元垂直置中*/
 }
 
-.container_table_cell h2 {
+.container_table_cell h2 {      /*首頁標題*/
   color: #fff;
   text-transform: capitalize;   /*首字大寫*/
   font-size: 54px;
-  font-family: 'Codystar', cursive;
+  letter-spacing: 10px;
+  font-weight: normal;
+  /*字型載入*/
+  font-family: 'Caesar Dressing', cursive;
 }
 
 .social_icons a {               /* icon 格式*/
   color: #fff;
   display: inline-block;
-  width: 50px;
+  width:  50px;
   height: 40px;
   line-height: 40px;
   font-size: 30px;
-  margin-right: 7px;
+  margin: 0px;
 }
 
-.overlay {                      /*製作圖片遮罩*/
-  background: rgba(0, 0, 0, 0.5);
+.overlay {                      /*製作圖片遮罩 暫時關閉*/
+  background: rgba(0, 0, 0, 0.0);
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  right:  10%;                  /* 10*2+80=100 */
+  top:    30%;                  /* 30*2+40=100 */
+  width:  80%;
+  height: 40%;
 }
 
 /***** About Me *****/
 
 h2 {
-  margin-bottom: 50px;
-  text-align: center;         /*標題置中*/
+  margin-bottom: 50px;          /*向下外擴*/
+  text-align: center;           /*標題置中*/
   font-size: 50px;
-  line-height: 50px;
-  text-transform: uppercase;  /*全部大寫*/
-  letter-spacing: 2px;        /*字母間距*/
-  font-family: 'Ravi Prakash', cursive;
+  line-height: 50px;            /*文字行高*/
+  text-transform: uppercase;    /*全部大寫*/
+  letter-spacing: 2px;          /*字母間距*/
+  font-family: 'Ravi Prakash', cursive;   /*字型載入*/
 }
 
-.col-left, .col-right {       /*切出兩個區塊*/
-  float: left;                /*浮動排列 會導致覆蓋內容 >> .clearfix 解決*/
+.col-left, .col-right {         /*切出兩個區塊*/
+  float: left;                  /*浮動排列 會導致覆蓋內容 >> .clearfix 解決*/
   width: 50%;
-  padding: 0 15px;            /*區塊左右都15px*/
+  padding: 0 15px;              /*區塊左右都內縮15px*/
 }
 
 .personal-info h3 {
   font-size: 15px;
-  letter-spacing: 2px;
-  margin-bottom: 6px;
+  letter-spacing: 2px;          /*字元間距*/
+  margin-bottom:  6px;          /*向下外擴*/
   text-transform: capitalize;
 }
 
 .personal-info p {
   color: #767676;
-  line-height: 24px;
-  text-align: justify;        /*文字左右切齊*/
+  line-height: 24px;            /*文字行高*/
+  text-align: justify;          /*文字左右切齊*/
 }
 
-.skill {                      /*技能清單外框*/
+.skill {                        /*技能清單外框*/
   margin: 30px auto;
 }
 
-.skill li {                   /*技能清單單元*/
+.skill li {                     /*技能清單單元*/
   font-size: 15px;
-  line-height: 35px;
+  line-height: 35px;            /*文字行高*/
   text-transform: capitalize;
 }
 
 .button-group .download_cv, .button-group .hire_me {    /*按鈕外框*/
   display: inline-block;                                /*按紐水平排列*/
+  margin-right: 20px;           /*按鈕向右推*/
 }
 
-.button-group .download_cv {
-  margin-right: 18px;
-}
-
-.button-group a {             /*按鈕單元*/
+.button-group a {               /*按鈕內容*/
   display: block;
   color: #000;
+  width: 150px;
   border: 1px solid #333;
-  border-radius: 10px;
-  padding: 10px 38px;
+  border-radius: 2px;           /*按鈕圓角*/
+  padding: 10px;
+  text-align: center;
   text-transform: capitalize;
 }
 
-.button-group a:hover {       /*游標接觸時 按鈕效果*/
-  background: #000;           /*游標接觸時 變成黑色*/
-  color: #fff;                /*游標接觸時 變成白色*/
+.button-group a:hover {         /*游標接觸時 按鈕效果*/
+  background: #000;             /*游標接觸時 變成黑色*/
+  color: #fff;                  /*游標接觸時 變成白色*/
   /*動畫漸變 all指定 background & color 因應不同瀏覽器支援 新增前綴詞*/
-  -webkit-transition: all .4s linear;       
-  -moz-transition: all .4s linear;
-  -ms-transition: all .4s linear;
-  -o-transition: all .4s linear;
-  transition: all .4s linear;
+  -webkit-transition: all .4s linear;     /* Chrome & Safari */
+  -moz-transition: all .4s linear;        /* FireFox */
+  -ms-transition: all .4s linear;         /* IE */
+  -o-transition: all .4s linear;          /* Opera */
+  transition: all .4s linear;             /* 所有瀏覽器 */
 }
 
 /***** My Service *****/
@@ -448,6 +451,4 @@ footer {
   margin-top: 15px;
   margin-right: 15px;
 }
-
-
 
